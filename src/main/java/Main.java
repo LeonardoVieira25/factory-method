@@ -1,9 +1,10 @@
-import aprovacao.Aluno;
+import evento.EventoFactory;
+import evento.IEvento;
 
 public class Main {
     public static void main(String[] args) {
-        Aluno aluno = new Aluno();
-        aluno.setFrequencia(10);
-        System.out.println("Frequência: " + aluno.getFrequencia());
+        IEvento evento = EventoFactory.criarEvento("Formatura");
+        evento.agendar();
+        evento.cancelar();
     }
 }
