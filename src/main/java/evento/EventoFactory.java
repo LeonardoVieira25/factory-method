@@ -11,10 +11,10 @@ public class EventoFactory {
                     .getDeclaredConstructor()
                     .newInstance();
         } catch (Exception ex) {
-            throw new IllegalArgumentException("Serviço inexistente");
+            throw new IllegalArgumentException("Evento inexistente");
         }
         if (!(objeto instanceof IEvento)) {
-            throw new IllegalArgumentException("Serviço inválido");
+            throw new IllegalArgumentException("Evento inválido");
         }
         return (IEvento) objeto;
     }
